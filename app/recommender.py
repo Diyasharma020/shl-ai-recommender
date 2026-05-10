@@ -1,19 +1,6 @@
 import json
-import faiss
-import numpy as np
-from sentence_transformers import SentenceTransformer
-
-# ---------- LOAD MODEL ----------
-
-model = SentenceTransformer(
-    'all-MiniLM-L6-v2'
-)
-
-# ---------- LOAD INDEX ----------
-
-index = faiss.read_index(
-    "data/assessment_index.faiss"
-)
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
 
 # ---------- LOAD DATA ----------
 
@@ -25,49 +12,39 @@ with open(
 
     assessments = json.load(f)
 
+# ---------- PREPARE TEXT ----------
+
+documents = [
+    item["description"]
+    for item in assessments
+]
+
+# ---------- TF-IDF ----------
+
+vectorizer = TfidfVectorizer()
+
+tfidf_matrix = vectorizer.fit_transform(documents)
+
 # ---------- RECOMMENDER ----------
 
 def recommend(query, top_k=5):
 
-    query_embedding = model.encode([query])
+    query_vector = vectorizer.transform([query])
 
-    distances, indices = index.search(
-        np.array(query_embedding),
-        top_k
-    )
+    similarities = cosine_similarity(
+        query_vector,
+        tfidf_matrix
+    )[0]
+
+    top_indices = similarities.argsort()[::-1][:top_k]
 
     results = []
 
-    used_names = set()
-
-    for i, idx in enumerate(indices[0]):
+    for idx in top_indices:
 
         item = assessments[idx]
 
-        # ---------- REMOVE DUPLICATES ----------
-
-        if item["name"] in used_names:
-            continue
-
-        used_names.add(item["name"])
-
-        # ---------- BETTER MATCH SCORE ----------
-
-        similarity = 1 / (1 + distances[0][i])
-
-        score = round(similarity * 100, 2)
-
-        # ---------- FILTER WEAK MATCHES ----------
-
-        if score < 35:
-            continue
-
-        # ---------- DYNAMIC REASON ----------
-
-        reason = (
-            f"Recommended because this assessment evaluates "
-            f"skills related to: {item['description'][:120]}"
-        )
+        score = round(similarities[idx] * 100, 2)
 
         results.append({
 
@@ -79,7 +56,11 @@ def recommend(query, top_k=5):
 
             "score": score,
 
-            "reason": reason
+            "reason": (
+                "Recommended because the assessment aligns "
+                "with the required technical skills and "
+                "semantic context in the job description."
+            )
         })
 
     return results
