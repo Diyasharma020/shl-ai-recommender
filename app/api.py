@@ -3,7 +3,11 @@ from pydantic import BaseModel
 from app.recommender import recommend
 
 app = FastAPI()
-
+@app.get("/")
+def root():
+    return {
+        "message": "SHL Conversational AI Recommender API"
+    }
 # ---------- REQUEST MODEL ----------
 
 class ChatRequest(BaseModel):
