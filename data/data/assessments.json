@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Java Backend Developer Assessment",
+    "url": "https://www.shl.com",
+    "description": "Evaluates Java programming, backend APIs, SQL databases, debugging, object oriented programming, and problem solving skills."
+  },
+  {
+    "name": "Data Analyst Assessment",
+    "url": "https://www.shl.com",
+    "description": "Measures SQL, Power BI, Excel, data visualization, analytical thinking, reporting, and business intelligence capabilities."
+  },
+  {
+    "name": "Software Engineer Assessment",
+    "url": "https://www.shl.com",
+    "description": "Assesses software development, algorithms, coding, debugging, system design, and programming fundamentals."
+  },
+  {
+    "name": "Frontend Developer Assessment",
+    "url": "https://www.shl.com",
+    "description": "Evaluates HTML, CSS, JavaScript, React, responsive UI design, frontend architecture, and web development skills."
+  },
+  {
+    "name": "AI/ML Engineer Assessment",
+    "url": "https://www.shl.com",
+    "description": "Measures machine learning, deep learning, Python, data science, NLP, model evaluation, and AI problem solving."
+  },
+  {
+    "name": "Cloud Engineer Assessment",
+    "url": "https://www.shl.com",
+    "description": "Assesses AWS, Azure, cloud infrastructure, DevOps, networking, deployment pipelines, and system reliability."
+  },
+  {
+    "name": "Cybersecurity Assessment",
+    "url": "https://www.shl.com",
+    "description": "Evaluates network security, ethical hacking, threat analysis, cryptography, risk assessment, and cybersecurity fundamentals."
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Technical Skills Assessment",
+    "url": "https://www.shl.com/products/assessments/skills-and-simulations/technical-skills/",
+    "description": "Evaluates software engineering, cloud engineering, DevOps, machine learning, data science, frontend, backend, SQL, and full stack technical skills."
+  },
+  {
+    "name": "Coding Simulation Assessment",
+    "url": "https://www.shl.com/products/assessments/skills-and-simulations/coding-simulations/",
+    "description": "Assesses coding ability, problem solving, debugging, algorithms, software engineering, and real-world programming skills using coding simulations."
+  },
+  {
+    "name": "Automata Coding Assessment",
+    "url": "https://www.shl.com/products/product-catalog/view/automata-new/",
+    "description": "AI-powered coding assessment that evaluates programming ability across multiple languages using real-world coding challenges."
+  },
+  {
+    "name": "Automata Fix Debugging Assessment",
+    "url": "https://www.shl.com/products/product-catalog/view/automata-fix-new/",
+    "description": "Measures debugging skills in Java, C, and C++ through compiler-based code correction and logical debugging exercises."
+  },
+  {
+    "name": "Aptitude Assessment",
+    "url": "https://www.shl.com/products/assessments/aptitude-tests/",
+    "description": "Evaluates analytical thinking, reasoning ability, problem solving, quantitative aptitude, logical reasoning, and learning capability."
+  },
+  {
+    "name": "Psychometric Assessment",
+    "url": "https://www.shl.com/products/assessments/psychometric-tests/",
+    "description": "Measures personality traits, behavioral competencies, workplace preferences, communication, teamwork, and leadership potential."
+  },
+  {
+    "name": "Skills and Simulations Assessment",
+    "url": "https://www.shl.com/products/assessments/skills-and-simulations/",
+    "description": "Assesses practical technical skills, simulations, communication, business skills, coding, language proficiency, and job readiness."
+  },
+  {
+    "name": "Product Catalog",
+    "url": "https://www.shl.com/products/product-catalog/",
+    "description": "Comprehensive catalog of SHL assessments covering technical, aptitude, personality, behavioral, coding, and cognitive evaluations."
+  },
+  {
+    "name": "SHL Products",
+    "url": "https://www.shl.com/products/",
+    "description": "Overview of SHL hiring and talent assessment solutions including interviews, coding assessments, aptitude tests, and workforce analytics."
+  },
+  {
+    "name": "Practice Assessments",
+    "url": "https://www.shl.com/shldirect/en/practice-tests/",
+    "description": "Practice assessments for coding, reasoning, numerical ability, personality, behavioral analysis, and workplace competencies."
+  }
+]
