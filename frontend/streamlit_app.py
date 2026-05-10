@@ -214,7 +214,7 @@ if st.button("🚀 Generate Recommendations"):
             "Analyzing job description using semantic AI..."
         ):
 
-            api_url = "http://127.0.0.1:8000/chat"
+            api_url = "https://shl-ai-backend-yn8p.onrender.com/chat"
 
             payload = {
                 "message": final_query
